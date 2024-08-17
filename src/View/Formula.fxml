@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.FormulaController">
+   <children>
+      <TextField disable="true" layoutX="82.0" layoutY="67.0" prefHeight="31.0" prefWidth="536.0" text="prefactorOfTime * (program time ^ pow) * GoldTimeFactor * betweenProgram">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="powTextField" layoutX="248.0" layoutY="157.0" promptText="power" />
+      <TextField fx:id="preFactorTextField" layoutX="248.0" layoutY="205.0" promptText="preFactor of timr" />
+      <TextField fx:id="goldTimeTextField" layoutX="248.0" layoutY="261.0" promptText="Gold time Factor" />
+      <TextField fx:id="betweenProgramTextField" layoutX="248.0" layoutY="317.0" promptText="between Program Factor" />
+      <Button fx:id="doneButton" layoutX="308.0" layoutY="546.0" mnemonicParsing="false" onMouseClicked="#done" text="Done" />
+      <Button fx:id="backButton" layoutX="50.0" layoutY="622.0" mnemonicParsing="false" onMouseClicked="#back" text="Back" textFill="#2000c3" />
+      <TextField fx:id="s_Hour" layoutX="42.0" layoutY="396.0" prefHeight="25.0" prefWidth="149.0" promptText="GoldTime Star tHour" />
+      <TextField fx:id="s_Minuet" layoutX="260.0" layoutY="396.0" promptText="GoldTime Start Minuet" />
+      <TextField fx:id="s_Second" layoutX="508.0" layoutY="396.0" promptText="GoldTime Start Second" />
+      <TextField fx:id="e_Hour" layoutX="43.0" layoutY="459.0" prefHeight="25.0" prefWidth="149.0" promptText="GoldTime End tHour" />
+      <TextField fx:id="e_Minuet" layoutX="261.0" layoutY="459.0" promptText="GoldTime End Minuet" />
+      <TextField fx:id="e_Second" layoutX="509.0" layoutY="459.0" promptText="GoldTime End Second" />
+      <ListView fx:id="channelListView" layoutX="486.0" layoutY="150.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label fx:id="timeLabel" layoutX="308.0" layoutY="484.0" text="Time Error" textFill="RED" visible="false" />
+      <Label fx:id="channelLabel" layoutX="572.0" layoutY="350.0" text="Select a Channel" textFill="RED" visible="false" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddCompanyController">
+   <children>
+      <TextField fx:id="priceTextField" layoutX="155.0" layoutY="390.0" promptText="price">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="addButton" layoutX="541.0" layoutY="534.0" mnemonicParsing="false" onMouseClicked="#add" onMouseEntered="#addEnter" onMouseExited="#addExit" text="add Money" textFill="#208000" />
+      <ListView fx:id="companiesListView" fixedCellSize="50.0" layoutX="479.0" layoutY="99.0" prefHeight="349.0" prefWidth="200.0" />
+      <TextField fx:id="nameTextField" layoutX="154.0" layoutY="202.0" promptText="name">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="passwordTextField" layoutX="154.0" layoutY="297.0" promptText="password">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="moneyTextField" layoutX="486.0" layoutY="482.0" promptText="money">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="makeButton" layoutX="199.0" layoutY="534.0" mnemonicParsing="false" onMouseClicked="#make" onMouseEntered="#makeEnter" onMouseExited="#makeExit" text="make Company" textFill="#02570f" />
+      <Button fx:id="backButton" layoutX="61.0" layoutY="623.0" mnemonicParsing="false" onMouseClicked="#back" onMouseEntered="#backEnter" onMouseExited="#backExit" text="Back" textFill="#1500ff" />
+      <Label fx:id="nameLabel" layoutX="176.0" layoutY="232.0" text="This Name Has Been Taken" textFill="RED" visible="false" />
+      <Label fx:id="priceLabel" layoutX="222.0" layoutY="420.0" text="Price Error" textFill="RED" visible="false" />
+      <Label fx:id="passwordLabel" layoutX="209.0" layoutY="327.0" text="password Error" textFill="RED" visible="false" />
+      <Label fx:id="addLabel" layoutX="566.0" layoutY="512.0" text="Error" textFill="RED" visible="false" />
+      <Label fx:id="done1Label" layoutX="552.0" layoutY="559.0" text="succefful" textFill="#00802b" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="done2Label" layoutX="223.0" layoutY="559.0" text="Succesful" textFill="#00a82a" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

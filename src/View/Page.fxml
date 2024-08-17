@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PageController">
+    <children>
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="264.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Sedasima.png" />
+            </image>
+            <effect>
+                <InnerShadow />
+            </effect>
+        </ImageView>
+        <ListView fx:id="channelsListView" editable="true" fixedCellSize="50.0" layoutX="495.0" layoutY="150.0" onMouseClicked="#showPrograms" prefHeight="551.0" prefWidth="206.0" />
+        <ImageView fx:id="settingViewImage" fitHeight="50.0" fitWidth="50.0" layoutX="7.0" layoutY="7.0" onMouseClicked="#getoSetting" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../setting.png" />
+            </image>
+        </ImageView>
+        <AnchorPane fx:id="settingPane" layoutX="1.0" layoutY="150.0" prefHeight="551.0" prefWidth="700.0" visible="false">
+            <children>
+                <Button fx:id="doneButton" layoutX="360.0" layoutY="389.0" mnemonicParsing="false" onMouseClicked="#makeChanges" onMouseEntered="#entered" onMouseExited="#exited" text="Done" textFill="#0011ff" visible="false" />
+                <TextField fx:id="name" layoutX="295.0" layoutY="57.0" promptText="new / pre   Name" visible="false">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="lastname" layoutX="295.0" layoutY="126.0" promptText="new / pre   Lastname" visible="false">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="passwordText1" layoutX="295.0" layoutY="257.0" promptText="new / pre   Password" visible="false">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="passwordText2" layoutX="295.0" layoutY="325.0" promptText="reenter Password" visible="false">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="newUsername" layoutX="295.0" layoutY="190.0" promptText="new Username" visible="false">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <PasswordField fx:id="password1" layoutX="295.0" layoutY="257.0" promptText="new / pre Password" visible="false">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </PasswordField>
+                <PasswordField fx:id="password2" layoutX="295.0" layoutY="325.0" promptText="reenter Password" visible="false">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </PasswordField>
+                <ImageView fx:id="visibleImage" fitHeight="35.0" fitWidth="35.0" layoutX="495.0" layoutY="255.0" onMouseClicked="#setUnvisible" pickOnBounds="true" preserveRatio="true" visible="false">
+                    <image>
+                        <Image url="@../visible.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="visibleImage2" fitHeight="35.0" fitWidth="35.0" layoutX="495.0" layoutY="323.0" onMouseClicked="#setUnvisible2" pickOnBounds="true" preserveRatio="true" visible="false">
+                    <image>
+                        <Image url="@../visible.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="unvisibleImage2" fitHeight="35.0" fitWidth="35.0" layoutX="495.0" layoutY="325.0" onMouseClicked="#setVisible2" pickOnBounds="true" preserveRatio="true" visible="false">
+                    <image>
+                        <Image url="@../unvisible.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="unvisibleImage" fitHeight="35.0" fitWidth="35.0" layoutX="495.0" layoutY="258.0" onMouseClicked="#setVisible" pickOnBounds="true" preserveRatio="true" visible="false">
+                    <image>
+                        <Image url="@../unvisible.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="backButton" layoutX="362.0" layoutY="460.0" mnemonicParsing="false" onMouseClicked="#back" onMouseEntered="#enteredBack" onMouseExited="#exitedBack" text="Back" textFill="#fc0000" visible="false" />
+                <Label fx:id="invalidUsernameLabel" layoutX="339.0" layoutY="220.0" text="username is invalid!" textFill="RED" visible="false" />
+                <Label fx:id="invalidPasswordLabel" layoutX="333.0" layoutY="285.0" text="password is invalid!" textFill="RED" visible="false" />
+                <Label fx:id="successfulLabel" layoutX="350.0" layoutY="355.0" text="successful" textFill="#46b203" visible="false" />
+            </children>
+        </AnchorPane>
+        <ListView fx:id="programListView" fixedCellSize="30.0" layoutX="295.0" layoutY="150.0" onMouseClicked="#showProgramInfo" prefHeight="551.0" prefWidth="200.0" visible="false" />
+        <TextArea fx:id="programInfoTextArea" layoutX="1.0" layoutY="150.0" prefHeight="295.0" prefWidth="294.0" visible="false">
+            <font>
+                <Font size="16.0" />
+            </font>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </TextArea>
+        <ChoiceBox fx:id="voteChoiceBox" layoutX="95.0" layoutY="445.0" onMouseClicked="#setSaveVisible" prefHeight="25.0" prefWidth="200.0" visible="false" />
+        <Label fx:id="voteLabel" layoutX="108.0" layoutY="612.0" text="You Have voted for this program" textFill="RED" visible="false" />
+        <Button fx:id="voteButton" layoutX="222.0" layoutY="529.0" mnemonicParsing="false" onMouseClicked="#saveVote" text="save Vote" textFill="#36a407" visible="false" />
+        <Label fx:id="selectNumberLabel" layoutX="151.0" layoutY="596.0" prefHeight="17.0" prefWidth="89.0" text="select a number" textFill="RED" visible="false" />
+        <ImageView fx:id="searchImageView" fitHeight="35.0" fitWidth="35.0" layoutX="652.0" layoutY="2.0" onMouseClicked="#searchForProgram" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../search.png" />
+            </image>
+        </ImageView>
+        <TextField fx:id="searchTextField" layoutX="499.0" layoutY="2.0" prefHeight="35.0" prefWidth="149.0" promptText="Enter Program">
+            <font>
+                <Font name="System Bold Italic" size="15.0" />
+            </font>
+        </TextField>
+        <Label fx:id="searchLabel" layoutX="533.0" layoutY="50.0" text="No such program!" textFill="RED" visible="false">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Button fx:id="logOutButton" layoutX="14.0" layoutY="621.0" mnemonicParsing="false" onMouseClicked="#logOut" onMouseEntered="#logOutEnter" onMouseExited="#logOutExit" text="Log Out" textFill="#0026ff">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+      <ChoiceBox fx:id="addChoiceBox" layoutX="7.0" layoutY="63.0" prefWidth="150.0" />
+      <ImageView fx:id="TVImageView" fitHeight="50.0" fitWidth="41.0" layoutX="116.0" layoutY="88.0" onMouseClicked="#add" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../TV.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

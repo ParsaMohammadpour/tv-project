@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginPageController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane fx:id="loginPane" prefHeight="700.0" prefWidth="700.0">
+         <children>
+            <TextField fx:id="usernameField" layoutX="275.0" layoutY="293.0" promptText="username">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="passwordField" layoutX="276.0" layoutY="350.0" promptText="password">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="loginButton" layoutX="309.0" layoutY="700.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="107.0" text="Login" textFill="#53ba3c" />
+            <TextField fx:id="textFieldPassword" layoutX="275.0" layoutY="350.0" prefHeight="30.0" prefWidth="175.0" promptText="password" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="wrongUsernameLabel" layoutX="318.0" layoutY="324.0" text="wrong username" textFill="#ff0a0a" visible="false" />
+            <Label fx:id="wrongPasswordLabel" layoutX="319.0" layoutY="408.0" text="wrong password" textFill="RED" visible="false" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="268.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Sedasima.png" />
+               </image>
+               <effect>
+                  <Reflection />
+               </effect>
+            </ImageView>
+            <Label fx:id="usernameEnterLabel" layoutX="316.0" layoutY="324.0" text="Enter a username!" textFill="#ff0404" visible="false" />
+            <Label fx:id="passwordEnterLabel" layoutX="316.0" layoutY="383.0" text="Enter a password !" textFill="#f80303" visible="false" />
+            <ImageView fx:id="visibilityImage" fitHeight="35.0" fitWidth="35.0" layoutX="506.0" layoutY="348.0" onMousePressed="#clickVisible" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../visible.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="unvisibilityImage" fitHeight="35.0" fitWidth="35.0" layoutX="506.0" layoutY="348.0" onMouseClicked="#clickVisible" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../unvisible.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="registerPageButton" layoutX="294.0" layoutY="573.0" mnemonicParsing="false" onAction="#gotoRegisterPage" onMouseEntered="#changeColorEnter" onMouseExited="#changeColorExit" text="Dont have an account!" textFill="#cf1121" />
+         </children>
+      </Pane>
+   </children>
+</GridPane>

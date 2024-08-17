@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddManagerController">
+   <children>
+      <TextField fx:id="nameTextField" layoutX="163.0" layoutY="123.0" promptText="name">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="lastnameTextField" layoutX="163.0" layoutY="195.0" promptText="lastname">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="passwordTextField" layoutX="163.0" layoutY="338.0" promptText="password">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <ListView fx:id="channelListView" layoutX="486.0" layoutY="115.0" prefHeight="320.0" prefWidth="200.0" />
+      <TextField fx:id="usernameTextField" layoutX="163.0" layoutY="269.0" promptText="username">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="backButton" layoutX="59.0" layoutY="611.0" mnemonicParsing="false" onMouseClicked="#back" onMouseEntered="#backEnter" onMouseExited="#backExit" text="Back" textFill="#002eab" />
+      <Button fx:id="makeButton" layoutX="324.0" layoutY="461.0" mnemonicParsing="false" onMouseClicked="#make" onMouseEntered="#makeEnter" onMouseExited="#makeExit" text="make Manager" textFill="#0d9a00" />
+      <Label fx:id="passwordLabel" layoutX="217.0" layoutY="368.0" text="Invlid Password" textFill="RED" />
+      <Label fx:id="usernameLabel" layoutX="175.0" layoutY="299.0" text="This Username Has Been Taken" textFill="RED" />
+      <Label fx:id="channelLabel" layoutX="531.0" layoutY="435.0" text="Select Channel Label" textFill="RED" visible="false" />
+      <Label fx:id="nullLabel" layoutX="340.0" layoutY="486.0" text="Fill All Fields" textFill="RED" visible="false" />
+      <Label fx:id="doneLabel" layoutX="328.0" layoutY="495.0" text="Succesfully Done" textFill="#007508" />
+   </children>
+</AnchorPane>
